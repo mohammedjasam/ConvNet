@@ -17,7 +17,6 @@ for s in super:
         files.remove("Thumbs.db")
         path = folder_path+d
         for x in files:
-            ctr+=1
             image_path = path + x
 
             # Read in the image_data
@@ -46,4 +45,6 @@ for s in super:
                 for node_id in top_k:
                     human_string = label_lines[node_id]
                     score = predictions[0][node_id]
+                    print(image_path+"\n")
                     print('%s (score = %.5f)' % (human_string, score))
+                    print()
